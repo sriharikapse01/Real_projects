@@ -49,7 +49,7 @@ def deposit():
         amount = (bank[acc_no][1])+balnce
         name=(bank[acc_no][0])
         bank[acc_no] = (name,amount)
-        print(f"You Have deposited successfully MR {name} of {amount} rupees")
+        print(f"You Have deposited {balnce} successfully MR {name} Your balance is  {amount} rupees")
         check_balance()
         
 
