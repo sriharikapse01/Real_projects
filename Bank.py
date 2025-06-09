@@ -3,7 +3,7 @@ bank = {}
 def transfer():
     sender = int(input("Enter the sender Account Number :- "))
     recever = int(input("Enter the recever Account Number :- "))
-    Amount = float(input("Enter the balnce to transfer :- "))
+    Amount = float(input("Enter the balance to transfer :- "))
     if sender not in bank:
         print("Sender Account not found")
         return
@@ -18,6 +18,7 @@ def transfer():
         return
     if sender_balance < Amount:
         print("Insufficient balance in senders account !!")
+        return
     sender_balance = sender_balance - Amount
     recever_balance = recever_balance + Amount
     bank[sender] = (sender_accno , sender_balance)
@@ -49,8 +50,8 @@ def deposit():
         amount = (bank[acc_no][1])+balnce
         name=(bank[acc_no][0])
         bank[acc_no] = (name,amount)
-        print(f"You Have deposited {balnce} successfully MR {name} Your balance is  {amount} rupees")
-        check_balance()
+        print(f"You Have deposited {balnce} successfully. \n{name} Your balance is  {amount} rupees")
+
         
 
 def withdraw():
